@@ -1,0 +1,200 @@
+
+:root {
+  --azul: #174a91;
+  --azul-claro: #3979ca;
+  --blanco: #ffffff;
+  --fondo: #f3f7fc;
+  --texto: #24344b;
+  --gris: #66758a;
+  --borde: #dce5f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+.encabezado {
+  background: var(--blanco);
+  min-height: 76px;
+  padding: 15px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 2px 12px #17365d12;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--azul);
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.marca-icono {
+  background: var(--azul);
+  color: white;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--texto);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--azul-claro);
+}
+
+nav .boton-acceso {
+  background: var(--azul);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 9px;
+}
+
+.bienvenida {
+  background: linear-gradient(120deg, #174a91, #3979ca);
+  color: white;
+  text-align: center;
+  padding: 95px 20px;
+}
+
+.etiqueta {
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.bienvenida h1 {
+  font-size: clamp(32px, 5vw, 52px);
+  margin-bottom: 15px;
+}
+
+.bienvenida > p:not(.etiqueta) {
+  max-width: 580px;
+  margin: 0 auto 28px;
+  color: #e8f1ff;
+}
+
+.boton-principal {
+  display: inline-block;
+  background: white;
+  color: var(--azul);
+  padding: 13px 24px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.seccion {
+  padding: 65px 7%;
+  text-align: center;
+}
+
+.seccion h2 {
+  color: var(--azul);
+  font-size: 29px;
+  margin-bottom: 8px;
+}
+
+.seccion > p {
+  color: var(--gris);
+}
+
+.lista-asignaturas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.tarjeta {
+  background: white;
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 5px 18px #17365d0b;
+}
+
+.tarjeta h3 {
+  color: var(--azul);
+  margin-bottom: 9px;
+  font-size: 18px;
+}
+
+.tarjeta p {
+  color: var(--gris);
+  font-size: 14px;
+}
+
+.informacion {
+  background: white;
+}
+
+.informacion p {
+  max-width: 650px;
+  margin: 12px auto 0;
+}
+
+.acceso {
+  background: var(--fondo);
+}
+
+footer {
+  background: #123765;
+  color: white;
+  text-align: center;
+  padding: 22px;
+  font-size: 13px;
+}
+
+@media (max-width: 650px) {
+  .encabezado {
+    flex-direction: column;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .bienvenida {
+    padding: 70px 20px;
+  }
+
+  .seccion {
+    padding: 45px 6%;
+  }
+}
